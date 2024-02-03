@@ -1,0 +1,12 @@
+body {
+  background-color: #1b1d22;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  font-family: 'Sofia Sans';
+}
+
+body h1 {
+  margin: 0;
+  padding: 0;
+}
