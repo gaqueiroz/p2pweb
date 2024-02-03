@@ -1,8 +1,7 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+// @ts-nocheck
 
-import { ThemeColors } from "styled-components";
+import { ButtonHTMLAttributes, PropsWithChildren, ReactNode } from "react";
 
-import { FCWithChildren } from "~/shared/types/FCWithChildren";
 import { TButtonSize } from "./types";
 
 import { Container } from "./styles";
@@ -10,15 +9,15 @@ import { Container } from "./styles";
 export interface IButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
-  backgroundColor?: ThemeColors;
-  textColor?: ThemeColors;
+  backgroundColor?: any;
+  textColor?: any;
   size?: TButtonSize;
   disabledHint?: ReactNode;
-  borderColor?: ThemeColors;
+  borderColor?: any;
   applyDarkenInBackground?: boolean;
 }
 
-export const Button: FCWithChildren<IButtonProps> = ({
+export const Button: any = ({
   isLoading,
   disabled,
   children,

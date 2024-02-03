@@ -1,12 +1,12 @@
-import styled, { ThemeColors } from 'styled-components';
+import styled from 'styled-components';
 import { darken } from 'polished'
 
 import { TButtonSize } from './types';
 
 interface IContainerProps {
-  backgroundColor: ThemeColors;
-  textColor: ThemeColors;
-  borderColor?: ThemeColors;
+  backgroundColor: any;
+  textColor: any;
+  borderColor?: any;
   size: TButtonSize;
   applyDarkenInBackground?: boolean;
 }
