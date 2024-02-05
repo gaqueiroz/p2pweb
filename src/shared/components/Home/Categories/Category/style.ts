@@ -11,5 +11,6 @@ export const Container = styled.div`
   .gameplays {
     display: flex;
     margin-top: 26px;
+    gap: 18px;
   }
 `;

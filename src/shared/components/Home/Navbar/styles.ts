@@ -16,8 +16,8 @@ export const Container = styled.div<IContainer>`
   ${({ enabledFixedStyle }) =>
      enabledFixedStyle &&
       css`
-        border-bottom: 4px solid;
-        border-image: linear-gradient(to right, #0ad692, #ff4500); /* Substitua as cores conforme necessário */
+        border-bottom: 2px solid;
+        border-image: linear-gradient(to right, #0ad692, #FFF); /* Substitua as cores conforme necessário */
         border-image-slice: 1;
       `}
 
