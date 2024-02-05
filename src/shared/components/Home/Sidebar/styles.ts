@@ -5,7 +5,7 @@ export const Container = styled.div`
   border: 1px solid #262629;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: 27px;
-  height: 75vh;
+  height: 76vh;
   width: 240px;
 
   ul {

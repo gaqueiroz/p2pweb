@@ -7,6 +7,10 @@ export const Categories: FC = () => {
   return (
     <div>
       <Category />
+
+      <Category />
+
+      <Category />
     </div>
   )
 }

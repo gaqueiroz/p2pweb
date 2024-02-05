@@ -14,5 +14,6 @@ export const Content = styled.div`
 
   .bets-content {
     margin-left: 26px;
+    width: 100%;
   }
 `;
