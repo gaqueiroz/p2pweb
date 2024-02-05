@@ -1,18 +1,22 @@
 import { FC } from "react";
 import { Container } from "./styles";
-import { SearchInput } from "../../SearchInput";
 import {
   RiFootballLine,
   RiHomeSmileLine,
   RiLiveLine,
   RiStarFill,
 } from "react-icons/ri";
-import { IoIosFootball } from "react-icons/io";
 import Link from "next/link";
 
-export const Sidebar: FC = () => {
+interface ISidebarProps {
+  enabledFixedStyled: boolean;
+}
+
+export const Sidebar: FC<ISidebarProps> = ({
+  enabledFixedStyled
+}) => {
   return (
-    <Container>
+    <Container enabledNavbarFixedStyle={enabledFixedStyled}>
       <ul>
         <li>
           <Link href={"/"}>

@@ -1,12 +1,25 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+interface IContainer {
+  enabledNavbarFixedStyle: boolean;
+}
+
+export const Container = styled.div<IContainer>`
   background: #191a1d;
   border: 1px solid #262629;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: 27px;
   height: 76vh;
   width: 240px;
+
+  ${({ enabledNavbarFixedStyle }) =>
+     enabledNavbarFixedStyle &&
+      css`
+        position: fixed;
+        top: 110px;
+        width: 208.7px!important;
+        height: 85vh;
+      `}
 
   ul {
     li {

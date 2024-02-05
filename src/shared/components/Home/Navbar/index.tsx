@@ -1,14 +1,18 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Container } from "./styles";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../Button";
 
-// import { Container } from './styles';
+interface INavbarProps {
+  enabledFixedStyle: boolean;
+}
 
-export const Navbar: FC = () => {
+export const Navbar: FC<INavbarProps> = ({
+  enabledFixedStyle
+}) => {
   return (
-    <Container>
+    <Container enabledFixedStyle={enabledFixedStyle}>
       <div className="content">
         <div className="logo-content">
           <Image width={200} height={25} src="/images/logo.png"  alt="logo"/>

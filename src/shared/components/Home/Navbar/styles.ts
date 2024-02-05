@@ -1,15 +1,27 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ContainerStyle } from "../../Container/styles";
 
-export const Container = styled(ContainerStyle)`
+interface IContainer {
+  enabledFixedStyle: boolean;
+}
 
+export const Container = styled.div<IContainer>`
   width: 100%;
-  /* background: #606060; */
-  /* position: fixed; */
+  position: fixed;
   padding-bottom: 26px;
   padding-top: 26px;
+  background-color: ${(props) => props.enabledFixedStyle ? '#191a1d' : 'tranparent'};
+  transition: all 0.3s;
 
-  .content {
+  ${({ enabledFixedStyle }) =>
+     enabledFixedStyle &&
+      css`
+        border-bottom: 4px solid;
+        border-image: linear-gradient(to right, #0ad692, #ff4500); /* Substitua as cores conforme necessário */
+        border-image-slice: 1;
+      `}
+
+  .content { 
     display: flex;
     margin-left: 30px;
     margin-right: 30px;
