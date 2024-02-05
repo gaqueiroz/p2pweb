@@ -5,7 +5,7 @@ interface IContainer {
 }
 
 export const Container = styled.div<IContainer>`
-  background: #191a1d;
+  background: #1b2026;
   border: 1px solid #262629;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: 27px;

@@ -10,15 +10,16 @@ export const Container = styled.div<IContainer>`
   position: fixed;
   padding-bottom: 26px;
   padding-top: 26px;
-  background-color: ${(props) => props.enabledFixedStyle ? '#191a1d' : 'tranparent'};
+  background-color: ${(props) => props.enabledFixedStyle ? '#1b2026' : 'tranparent'};
   transition: all 0.3s;
 
   ${({ enabledFixedStyle }) =>
      enabledFixedStyle &&
       css`
-        border-bottom: 2px solid;
-        border-image: linear-gradient(to right, #0ad692, #FFF); /* Substitua as cores conforme necessário */
-        border-image-slice: 1;
+        /* border-bottom: 2px solid;
+        border-image: linear-gradient(to right, #0ad692, #FFF);
+        border-image-slice: 1; */
+        box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 30%);
       `}
 
   .content { 

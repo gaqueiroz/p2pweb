@@ -1,39 +1,62 @@
 // @ts-nocheck
 
 import { FC } from "react";
-import Image from 'next/image';
-import { Container } from "./styles";
-import { Button } from "@/shared/components/Button";
+import Image from "next/image";
 
-// import { Container } from './styles';
+import { Container, BetButton } from "./styles";
 
 export const CardGameplay: FC = () => {
   return (
     <Container>
       <div className="teams">
-        <Image width={60} height={60} src={"https://uploaddeimagens.com.br/images/004/730/957/full/palmeiras.png?1706995931"} />
-
-X
-
-        <Image width={60} height={60} src={"https://uploaddeimagens.com.br/images/004/730/959/full/corinthians.png?1706996034"} />
+        <Image
+          width={60}
+          height={60}
+          src={
+            "https://uploaddeimagens.com.br/images/004/730/957/full/palmeiras.png?1706995931"
+          }
+        />
+        X
+        <Image
+          width={60}
+          height={60}
+          src={
+            "https://uploaddeimagens.com.br/images/004/730/959/full/corinthians.png?1706996034"
+          }
+        />
       </div>
-   
-      
+
       <div className="info">
-        <span>
-          Campeonato paulista
-        </span>
+        <span>Campeonato paulista</span>
       </div>
 
       <div className="date">
-        <span>
-          Dom 18:00
-        </span>
+        <span>Dom 18:00</span>
       </div>
 
-      <Button>
+      {/* <Button>
         Apostar
-      </Button>
+      </Button> */}
+
+      <div className="buttons-container">
+        <BetButton>
+          <span>2.00</span>
+          <br />
+          Palmeiras
+        </BetButton>
+
+        <BetButton>
+          <span>2.00</span>
+          <br />
+          Empate
+        </BetButton>
+
+        <BetButton>
+          <span>2.00</span>
+          <br />
+          Corinthians
+        </BetButton>
+      </div>
     </Container>
-  )
-}
+  );
+};
