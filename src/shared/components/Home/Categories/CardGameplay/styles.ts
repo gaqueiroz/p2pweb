@@ -7,14 +7,26 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #1b2026;
-  border: 1px solid #1b2026;
+  border: 1px solid #8b8c8c1f;
   gap: 2;
-  /* padding-bottom: 30px; */
   padding-top: 30px;
   cursor: pointer;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   transition: all 0.2s;
 
+  .teams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    span {
+      color: ${({ theme }) => theme.colors.primary};
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 14px;
+    }
+  }
 
   .info {
     margin-top: 20px;
@@ -43,6 +55,7 @@ export const BetButton = styled.button`
   width: 80px !important;
   color: #fff;
   margin-bottom: 12px;
+
 
 
   &:hover {

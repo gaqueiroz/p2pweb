@@ -12,6 +12,7 @@ export const Container = styled.div<IContainer>`
   padding-top: 26px;
   background-color: ${(props) => props.enabledFixedStyle ? '#1b2026' : 'tranparent'};
   transition: all 0.3s;
+  z-index: 10;
 
   ${({ enabledFixedStyle }) =>
      enabledFixedStyle &&

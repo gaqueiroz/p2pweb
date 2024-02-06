@@ -5,57 +5,57 @@ import Image from "next/image";
 
 import { Container, BetButton } from "./styles";
 
-export const CardGameplay: FC = () => {
+export interface IGameplay {
+  title: string;
+  date: Date;
+  from: {
+    name: string;
+    logo: string;
+  };
+  to: {
+    name: string;
+    logo: string;
+  };
+  bets: {
+    name: string;
+    value: number;
+  }[];
+}
+interface ICardGameplayProps {
+  data: IGameplay;
+}
+
+export const CardGameplay: FC<ICardGameplayProps> = ({ data }) => {
   return (
     <Container>
       <div className="teams">
-        <Image
-          width={60}
-          height={60}
-          src={
-            "https://uploaddeimagens.com.br/images/004/730/957/full/palmeiras.png?1706995931"
-          }
-        />
-        X
-        <Image
-          width={60}
-          height={60}
-          src={
-            "https://uploaddeimagens.com.br/images/004/730/959/full/corinthians.png?1706996034"
-          }
-        />
+        {data.from && <Image width={60} height={60} src={data.from.logo} alt="from" />}
+
+        <span>VS</span>
+
+        {data.to && <Image width={60} height={60} src={data.to.logo} alt="to" />}
       </div>
 
       <div className="info">
-        <span>Campeonato paulista</span>
+        <span>{data.title}</span>
       </div>
 
       <div className="date">
-        <span>Dom 18:00</span>
+        <span>
+          {'agora'}
+        </span>
       </div>
 
-      {/* <Button>
-        Apostar
-      </Button> */}
-
       <div className="buttons-container">
-        <BetButton>
-          <span>2.00</span>
-          <br />
-          Palmeiras
-        </BetButton>
+        {data.bets?.map((bet, index) => (
+          <BetButton key={`bet-button-${index}`}>
+            <span>{bet.value.toFixed(2)}</span>
 
-        <BetButton>
-          <span>2.00</span>
-          <br />
-          Empate
-        </BetButton>
+            <br />
 
-        <BetButton>
-          <span>2.00</span>
-          <br />
-          Corinthians
-        </BetButton>
+            {bet.name}
+          </BetButton>
+        ))}
       </div>
     </Container>
   );
