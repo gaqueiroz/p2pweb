@@ -8,7 +8,7 @@ export const Container = styled.div<IContainer>`
   background: #1b2026;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: 27px;
-  height: 76vh;
+  height: 85vh;
   width: 240px;
   border: 1px solid #8b8c8c1f;
 
