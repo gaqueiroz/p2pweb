@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Category } from "./Category";
 import { IGameplay } from "./CardGameplay";
+import { Container } from "./styles";
 
 // import { Container } from './styles';
 
@@ -266,10 +267,10 @@ const data = [
 
 export const Categories: FC = () => {
   return (
-    <div>
+    <Container>
       {data.map((category, index) => (
         <Category key={`category-${index}`} data={category} />
       ))}
-    </div>
+    </Container>
   );
 };
