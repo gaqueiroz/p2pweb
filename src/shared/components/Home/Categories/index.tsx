@@ -200,10 +200,6 @@ const data = [
             value: 1.3,
           },
           {
-            name: "Empate",
-            value: 1.9,
-          },
-          {
             name: "Houston",
             value: 2,
           },
@@ -226,10 +222,6 @@ const data = [
             value: 1.4,
           },
           {
-            name: "Empate",
-            value: 2,
-          },
-          {
             name: "Grizzlies",
             value: 2.4,
           },
@@ -250,10 +242,6 @@ const data = [
           {
             name: "Miami Heat",
             value: 1.3,
-          },
-          {
-            name: "Empate",
-            value: 2,
           },
           {
             name: "Orlando Magic",
