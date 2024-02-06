@@ -35,6 +35,12 @@ export const Container = styled.div`
   .date {
     margin-top: 10px;
     margin-bottom: 20px;
+
+    span {
+      color: ${({ theme }) => theme.colors.primary};
+      font-size: 12px;
+      font-weight: bold;
+    }
   }
 
   .buttons-container {

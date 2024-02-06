@@ -3,11 +3,13 @@
 import { FC } from "react";
 import Image from "next/image";
 
+import { formatDate } from '../../../../utils/formatDate';
 import { Container, BetButton } from "./styles";
 
 export interface IGameplay {
   title: string;
   date: Date;
+  isLive?: boolean;
   from: {
     name: string;
     logo: string;
@@ -42,7 +44,7 @@ export const CardGameplay: FC<ICardGameplayProps> = ({ data }) => {
 
       <div className="date">
         <span>
-          {'agora'}
+          {data.isLive ? 'agora' : formatDate(data.date)}
         </span>
       </div>
 

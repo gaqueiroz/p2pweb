@@ -15,6 +15,7 @@ const data = [
     gameplays: [
       {
         title: "Campeonato paulista",
+        isLive: true,
         date: new Date(),
         from: {
           name: "Palmeiras",
@@ -41,6 +42,7 @@ const data = [
       },
       {
         title: "Champions league",
+        isLive: true,
         from: {
           name: "Machester City",
           logo: "https://uploaddeimagens.com.br/images/004/732/805/full/city.png?1707185168",
@@ -67,6 +69,7 @@ const data = [
       },
       {
         title: "Campeonato carioca",
+        isLive: true,
         from: {
           name: "Flamengo",
           logo: "https://uploaddeimagens.com.br/images/004/732/813/full/flamengo.png?1707185663",
