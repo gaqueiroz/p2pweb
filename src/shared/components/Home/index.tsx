@@ -5,6 +5,7 @@ import { Navbar } from "./Navbar";
 import { Welcome } from "./Welcome";
 import { SearchInput } from "../SearchInput";
 import { Categories } from "./Categories";
+import { ScaleFade } from "@chakra-ui/transition";
 
 
 export const Home: FC = () => {
@@ -27,15 +28,21 @@ export const Home: FC = () => {
 
   return (
     <Container>
-      <Navbar enabledFixedStyle={scrollPosition > 0} />
+      <ScaleFade in={true}>
+        <Navbar enabledFixedStyle={scrollPosition > 0} />
+      </ScaleFade>
 
-      <SearchInput />
+      <ScaleFade in={true} delay={0.2}>
+        <SearchInput />
+      </ScaleFade>
 
 
       <Content>
-        <Sidebar enabledFixedStyled={scrollPosition > 62} />
+        <ScaleFade in={true} delay={0.3}>
+          <Sidebar enabledFixedStyled={scrollPosition > 62} />
+        </ScaleFade>
 
-        <div className="bets-content" {...(scrollPosition > 62 && {style: { marginLeft: 234.7 }})}>
+        <div className="bets-content" {...(scrollPosition > 62 && {style: { marginLeft: 266 }})}>
           <Welcome />
           
           <Categories />

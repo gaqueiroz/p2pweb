@@ -13,6 +13,7 @@ export const Container = styled.div<IContainer>`
   background-color: ${(props) => props.enabledFixedStyle ? '#1b2026' : 'tranparent'};
   transition: all 0.3s;
   z-index: 10;
+  justify-content: center;
 
   ${({ enabledFixedStyle }) =>
      enabledFixedStyle &&
@@ -60,6 +61,8 @@ export const Container = styled.div<IContainer>`
 
     .nav-options {
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
     }
   }
 `;

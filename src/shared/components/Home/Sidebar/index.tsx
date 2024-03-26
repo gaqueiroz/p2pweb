@@ -19,7 +19,7 @@ export const Sidebar: FC<ISidebarProps> = ({
     <Container enabledNavbarFixedStyle={enabledFixedStyled}>
       <ul>
         <li>
-          <Link href={"/"}>
+          <Link href={"/"} style={{color: '#0ad692' }}>
             <RiHomeSmileLine />
             Página inicial
           </Link>

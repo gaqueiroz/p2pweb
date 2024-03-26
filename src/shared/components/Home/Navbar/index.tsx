@@ -15,7 +15,7 @@ export const Navbar: FC<INavbarProps> = ({
     <Container enabledFixedStyle={enabledFixedStyle}>
       <div className="content">
         <div className="logo-content">
-          <Image width={200} height={25} src="/images/logo.png"  alt="logo"/>
+          <Image width={90} height={40} src="/images/logo.png"  alt="logo"/>
         </div>
 
         <div className="nav-items">
@@ -37,15 +37,19 @@ export const Navbar: FC<INavbarProps> = ({
           </div> */}
 
           <div style={{ marginRight: 16 }}>
-            <Button size="md" borderColor="gray400" backgroundColor="gray500">
-              Entrar
-            </Button>
+            <Link href={'/auth/signin'}>
+              <Button size="md" borderColor="gray400" backgroundColor="gray500">
+                Entrar
+              </Button>
+            </Link>
           </div>
 
           <div>
-            <Button size="md">
-              Cadastre-se
-            </Button>
+            <Link href={'/auth/signup'}>
+              <Button size="md">
+                Cadastre-se
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

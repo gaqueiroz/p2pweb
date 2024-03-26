@@ -1,9 +1,14 @@
 body {
   background-color: #1b1d22;
+  /* background-image: linear-gradient(to bottom, #070709, #070c11, #021116, #001616, #021912); */
   margin: 0;
   padding: 0;
   color: #FFF;
   font-family: 'Sofia Sans';
+}
+
+.auth-background {
+  /* background: linear-gradient(180deg, rgba(27, 29, 34, 1) 0%, rgba(9, 53, 41, 1) 100%); */
 }
 
 body h1 {

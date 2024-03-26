@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Category } from "./Category";
 import { IGameplay } from "./CardGameplay";
 import { Container } from "./styles";
+import { ScaleFade } from "@chakra-ui/transition";
 
 // import { Container } from './styles';
 
@@ -256,9 +257,13 @@ const data = [
 export const Categories: FC = () => {
   return (
     <Container>
-      {data.map((category, index) => (
-        <Category key={`category-${index}`} data={category} />
-      ))}
+      {data.map((category, index) => {
+        return (
+          <ScaleFade in={true} delay={0.2} key={`scale-${index}`}>
+            <Category key={`category-${index}`} data={category} />
+          </ScaleFade>
+        );
+      })}
     </Container>
   );
 };

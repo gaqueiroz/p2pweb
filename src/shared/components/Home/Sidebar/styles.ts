@@ -17,7 +17,7 @@ export const Container = styled.div<IContainer>`
       css`
         position: fixed;
         top: 110px;
-        width: 208.7px!important;
+        /* width: 208.7px !important; */
         height: 85vh;
       `}
 
@@ -35,7 +35,15 @@ export const Container = styled.div<IContainer>`
         text-decoration: none;
         color: #fff;
         transition: all 1.2s;
+
+   
       }
+
+      a > {
+        color: ${({ theme }) => theme.colors.primary};
+        width: 100%;
+      }
+
 
       &:hover {
         a {
